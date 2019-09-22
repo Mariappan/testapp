@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class Clock extends React.Component {
+export class RoughText extends React.Component {
     render() {
       return (
         <div>

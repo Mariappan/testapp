@@ -30,31 +30,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.navLogo {                                                                                                
+.navLogo {
   align-items: center;
-display: flex;                                                                                          
-margin-right: 48px;                                                                                     
-                                                                                                                                                                                                         
-& .logoLink {                                                                                           
-  display: flex;                                                                                        
-  align-items: center;                                                                                  
-                                                                                                        
-  &:focus {                                                                                             
-    outline: none !important;                                                                           
-  }                                                                                                     
-}                                                                                                       
-                                                                                                        
-& .logo {                                                                                               
-  height: 24px;                                                                                         
-  width: auto;                                                                                          
-  display: flex;                                                                                        
-  padding: var(--m-m) 0;                                                                                
-}                                                                                                       
+  display: flex;
+  margin-right: 48px;
+
+  & .logoLink {
+    display: flex;
+    align-items: center;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  & .logo {
+    height: 24px;
+    width: auto;
+    display: flex;
+    padding: var(--m-m) 0;
+  }
 }
 
 @keyframes App-logo-spin {

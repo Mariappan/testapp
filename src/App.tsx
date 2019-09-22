@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import { Clock } from './libui/components/Clock';
+import { RoughText } from './components/RoughText/RoughText';
 
 const App: React.FC = () => {
   return (
@@ -21,7 +21,8 @@ const App: React.FC = () => {
         </a>
       </header>
       <div className="App-main">
-        <Clock/>
+        <RoughText/>
+        <RoughText/>
       </div>
     </div>
   );
