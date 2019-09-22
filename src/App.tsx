@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Clock } from './libui/components/Clock';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -19,6 +20,9 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <div className="App-main">
+        <Clock/>
+      </div>
     </div>
   );
 }
