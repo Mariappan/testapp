@@ -1,0 +1,36 @@
+.Clock {
+  text-align: center;
+}
+
+.Clock-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Clock-header {
+  background-color: #282c34;
+  height: 20vh;
+  max-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Clock-link {
+  color: #61dafb;
+}
+
+.Clock-main {
+  background-color: #343434;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

@@ -12,8 +12,8 @@ class InnerApp extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="App-main">
-          <RoughText />
           <Clock />
+          <RoughText />
         </div>
       </div>
     );
