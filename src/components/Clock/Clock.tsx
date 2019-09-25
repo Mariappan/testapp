@@ -4,7 +4,6 @@ import './assets/clock.scss';
 // the clock's state has one field: The current time, based upon the
 // JavaScript class Date
 export interface ClockState {
-  time: Date,
   hours: number,
   minutes: number,
   seconds: number
@@ -18,17 +17,22 @@ export class Clock extends Component<{}, ClockState> {
 
   constructor(props: any) {
     super(props);
+    const date = new Date();
+    const formatHours = (hours: number) => {
+      return hours > 12 ? hours - 12 : (hours ? hours : 12)
+    }
+
+    this.state = {
+      seconds: date.getSeconds(),
+      minutes: date.getMinutes(),
+      hours: formatHours(date.getHours())
+    }
     this.interval = null;
-    this.state = { time: new Date(), seconds: 0, minutes: 0, hours: 12 }
-    this.dump();
   }
 
   // The tick function sets the current state. TypeScript will let us know
   // which ones we are allowed to set.
   tick() {
-    this.setState({
-      time: new Date()
-    });
     this.setState(state => {
       let sec: number = state.seconds;
       let min: number = state.minutes;
@@ -71,7 +75,7 @@ export class Clock extends Component<{}, ClockState> {
   // render will know everything!
   render() {
     // Icon
-    function IconUmbrella(props: any) {
+    function IconClock(props: any) {
       const little: number = ((props.little*30) + (props.big/2)) || 0
       const big: number = props.big * 6 || 0
       const fast: number = props.fast *6 || 0
@@ -97,6 +101,6 @@ export class Clock extends Component<{}, ClockState> {
         </svg>
       )
     }
-    return <IconUmbrella fast={this.state.seconds} big={this.state.minutes} little={this.state.hours}/>
+    return <IconClock fast={this.state.seconds} big={this.state.minutes} little={this.state.hours}/>
   }
 }
