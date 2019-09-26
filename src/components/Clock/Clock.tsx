@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; // let's also import Component
 import './assets/clock.scss';
+import { ClockIcon } from './ClockIcon';
 
 // the clock's state has one field: The current time, based upon the
 // JavaScript class Date
@@ -54,11 +55,7 @@ export class Clock extends Component<{}, ClockState> {
         minutes: min,
         hours: hr
       }
-    }, this.dump)
-  }
-
-  dump() {
-    // console.log(`== MAARI == Time is`, this.state.hours, ":", this.state.minutes, ":", this.state.seconds);
+    })
   }
 
   // After the component did mount, we set the state each second.
@@ -74,33 +71,6 @@ export class Clock extends Component<{}, ClockState> {
 
   // render will know everything!
   render() {
-    // Icon
-    function IconClock(props: any) {
-      const little: number = ((props.little*30) + (props.big/2)) || 0
-      const big: number = props.big * 6 || 0
-      const fast: number = props.fast *6 || 0
-
-      const rotatehand = (value: number) => {
-        return "rotate(" + value + ",80,80)";
-      }
-
-      return (
-        <svg viewBox="0 0 160 160" width="160pt" height="160pt">
-          <defs>
-            <clipPath id="_clipPath_IAv25CjndUvOTDrZhLzZ3EkaVHrkuZNf">
-              <rect width="160" height="160" />
-            </clipPath>
-          </defs>
-          <g clip-path="url(#_clipPath_IAv25CjndUvOTDrZhLzZ3EkaVHrkuZNf)">
-            <circle vector-effect="non-scaling-stroke" cx="79.99999999999999" cy="79.99999999999999" r="70" fill="rgb(49,101,128)" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="0.75" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
-            <circle vector-effect="non-scaling-stroke" cx="80" cy="80" r="1" fill="none" stroke-width="1" stroke="rgb(202,233,246)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="3" />
-            <line x1="80" y1="80" x2="80" y2="20" transform = {rotatehand(fast)} vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(218,240,253)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
-            <line x1="80" y1="80" x2="80" y2="20" transform = {rotatehand(big)} vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(218,240,253)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
-            <line x1="80" y1="40" x2="80" y2="80" transform = {rotatehand(little)} vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(202,233,246)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
-          </g>
-        </svg>
-      )
-    }
-    return <IconClock fast={this.state.seconds} big={this.state.minutes} little={this.state.hours}/>
+    return <ClockIcon fast={this.state.seconds} big={this.state.minutes} little={this.state.hours} />
   }
 }
