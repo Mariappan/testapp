@@ -1,16 +1,10 @@
 import React from "react";
-import './assets/clock.scss';
+import { ClockSVGProps } from ".";
 
-export interface ClockIconProps {
-  big: number;
-  little: number;
-  fast: number;
-}
-
-export const ClockIcon: React.FC<ClockIconProps> = (props: ClockIconProps) => {
-  const little: number = ((props.little * 30) + (props.big / 2)) || 0
-  const big: number = props.big * 6 || 0
-  const fast: number = props.fast * 6 || 0
+export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
+  const little: number = ((props.hours * 30) + (props.minutes / 2)) || 0
+  const big: number = props.minutes * 6 || 0
+  const fast: number = props.seconds * 6 || 0
 
   const rotatehand = (value: number) => {
     return "rotate(" + value + ",80,80)";

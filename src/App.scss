@@ -4,8 +4,9 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vh;
   pointer-events: none;
+  justify-content: left;
 }
 
 .App-header {
@@ -13,7 +14,7 @@
   height: 20vh;
   max-height: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -33,28 +34,7 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.navLogo {
-  align-items: center;
-  display: flex;
-  margin-right: 48px;
-
-  & .logoLink {
-    display: flex;
-    align-items: center;
-
-    &:focus {
-      outline: none !important;
-    }
-  }
-
-  & .logo {
-    height: 24px;
-    width: auto;
-    display: flex;
-    padding: var(--m-m) 0;
-  }
+  padding: 5vh;
 }
 
 @keyframes App-logo-spin {
