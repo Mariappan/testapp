@@ -1,5 +1,7 @@
 import React, { Component } from 'react'; // let's also import Component
-import { ClockSVG } from './DigitalClock';
+import { ClockSVG as AnalogClock1 } from './AnalogClock1';
+import { ClockSVG as AnalogClock2 } from './AnalogClock2';
+import { ClockSVG as AnalogClock3 } from './AnalogClock3';
 
 // the clock's state has one field: The current time, based upon the
 // JavaScript class Date
@@ -71,7 +73,7 @@ export class Clock extends Component<{}, ClockState> {
         {/* <button onClick={this.onClickButton1}>
           Clock
         </button> */}
-        <ClockSVG seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours} />
+        <AnalogClock3 seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours} />
       </>
     )
   }

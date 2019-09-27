@@ -6,7 +6,7 @@ export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
     // const fixTime = (t: number) => String(t).padStart(2, '0');
 
     const Circle = (props: any) => {
-        const {radius, angle, temp=3} = props;
+        const {radius, angle, temp} = props;
         const radian = angle * 0.0174532925;
         const x = radius * Math.cos(radian) + radius;
         const y = radius * Math.sin(radian) + radius;
@@ -18,14 +18,14 @@ export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
         return Array.from(Array(length), (x, index) => start + index * step);
     }
     const Dots = (props: any) => {
-        const {num, thickness=3} = props;
+        const {num, thickness=2} = props;
         var angles = rangeBetween(0, 360, num);
         return <> {angles.map(value => <Circle radius={100} angle={value} temp={thickness}/>)}</>;
     }
     // return <div>Time is {fixTime(hours)}:{fixTime(minutes)}:{fixTime(seconds)}</div>
     return (
         <svg viewBox="0 0 240 240" height="240px">
-            {/* <rect x="0" y="0" width="240" height="240" fill="none" stroke="blue" /> */}
+            <rect x="0" y="0" width="240" height="240" fill="none" stroke="blue" />
             <circle cx="120" cy="120" r="110" fill="green" stroke="black" stroke-width="1" />
             <symbol viewBox="-10 -10 220 220" id="clockNum" fill="black" stroke="black" stroke-width="2" >
                 <Dots num={30}/>
