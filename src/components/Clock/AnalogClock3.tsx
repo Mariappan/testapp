@@ -26,7 +26,7 @@ export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
         const translation = () => "translate(" + props.x + " " + props.y + ")";
         return (
             <text transform={translation()}>
-                <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="20">{props.text}</tspan>
+                <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="14">{props.text}</tspan>
             </text>
         );
     };
@@ -53,12 +53,12 @@ export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
                     )}
                 </symbol>
                 <symbol id="clockNumbers" >
-                    <NumberText x="190" y="125" text="3" />
-                    <NumberText x="115" y="200" text="6" />
-                    <NumberText x="40" y="125" text="9" />
-                    <NumberText x="110" y="54" text="12" />
+                    <NumberText x="195" y="125" text="3" />
+                    <NumberText x="115" y="203" text="6" />
+                    <NumberText x="36" y="125" text="9" />
+                    <NumberText x="111" y="47" text="12" />
                     <text transform="translate(107, 85)" stroke="darkslategray" fill="darkslategray">
-                        <tspan x="0" y="0" fontFamily="'ComicSansMS'" fontSize="10">Ajanta</tspan>
+                        <tspan x="0" y="0" fontFamily="'Times'" fontSize="8" strokeWidth="0.4">Ajanta</tspan>
                     </text>
                 </symbol>
                 {/* Line Border rounded by strokeLinecap */}
