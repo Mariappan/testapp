@@ -39,37 +39,37 @@ export const ClockSVG: React.FC<ClockSVGProps> = (props: ClockSVGProps) => {
           <path d="m401.44 222.44h28.598c6.448 0 6.448-10 0-10h-28.598c-6.449 0-6.449 10 0 10z" />
           <path d="m374.68 314.12 24.39 13.93c5.608 3.203 10.645-5.438 5.047-8.635l-24.39-13.93c-5.609-3.203-10.645 5.438-5.047 8.635z" />
           <path d="m305.206,378.826 14.211,25.288c3.159,5.621 11.798.581 8.635-5.047l-14.211-25.288c-3.159-5.621-11.798-.581-8.635,5.047z" />
-          <circle vector-effect="non-scaling-stroke" cx="217" cy="217" r="10" stroke-width="1" />
+          <circle vectorEffect="non-scaling-stroke" cx="217" cy="217" r="10" strokeWidth="1" />
           <switch>
             <text transform="translate(47.955 229.81)">
-              <tspan x="0" y="0" font-family="'ComicSansMS-Bold'" font-size="36">9</tspan>
+              <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="36">9</tspan>
             </text>
           </switch>
           <switch>
             <text transform="translate(196.96 78.807)">
-              <tspan x="0" y="0" font-family="'ComicSansMS-Bold'" font-size="36">12</tspan>
+              <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="36">12</tspan>
             </text>
           </switch>
           <switch>
             <text transform="translate(207.96 385.81)">
-              <tspan x="0" y="0" font-family="'ComicSansMS-Bold'" font-size="36">6</tspan>
+              <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="36">6</tspan>
             </text>
           </switch>
           <switch>
             <text transform="translate(363.96 228.81)">
-              <tspan x="0" y="0" font-family="'ComicSansMS-Bold'" font-size="36">3</tspan>
+              <tspan x="0" y="0" fontFamily="'ComicSansMS-Bold'" fontSize="36">3</tspan>
             </text>
           </switch>
         </symbol>
       </defs>
-      <g clip-path="url(#_clipPath_IAv25CjndUvOTDrZhLzZ3EkaVHrkuZNf)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3">
-        <circle vector-effect="non-scaling-stroke" cx="80" cy="80" r="70" fill="url(#clockBase)" stroke="black" stroke-width="15" />
+      <g clipPath="url(#_clipPath_IAv25CjndUvOTDrZhLzZ3EkaVHrkuZNf)" strokeLinejoin="miter" strokeLinecap="square" strokeMiterlimit="3">
+        <circle vectorEffect="non-scaling-stroke" cx="80" cy="80" r="70" fill="url(#clockBase)" stroke="black" strokeWidth="15" />
         <svg viewBox="0 0 434.869 434.87" x="10" width="140" >
           <use href="#clockNum" />
         </svg>
-        <line x1="80" y1="80" x2="80" y2="30" transform={rotatehand(fast)} vector-effect="non-scaling-stroke" stroke-width="1" stroke={handColour} />
-        <line x1="80" y1="80" x2="80" y2="30" transform={rotatehand(big)} vector-effect="non-scaling-stroke" stroke-width="2" stroke={handColour} />
-        <line x1="80" y1="80" x2="80" y2="50" transform={rotatehand(little)} vector-effect="non-scaling-stroke" stroke-width="2" stroke={handColour} />
+        <line x1="80" y1="80" x2="80" y2="30" transform={rotatehand(fast)} vectorEffect="non-scaling-stroke" strokeWidth="1" stroke={handColour} />
+        <line x1="80" y1="80" x2="80" y2="30" transform={rotatehand(big)} vectorEffect="non-scaling-stroke" strokeWidth="2" stroke={handColour} />
+        <line x1="80" y1="80" x2="80" y2="50" transform={rotatehand(little)} vectorEffect="non-scaling-stroke" strokeWidth="2" stroke={handColour} />
       </g>
     </svg>
   )

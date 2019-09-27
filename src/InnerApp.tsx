@@ -9,7 +9,7 @@ class InnerApp extends React.Component {
       <div className="App">
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <text>C L O C K</text>
+          <h1>C L O C K</h1>
         </header>
 
         <div className="App-main">
