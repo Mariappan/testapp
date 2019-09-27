@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; // let's also import Component
-import { ClockSVG } from './AnalogClock';
+import { ClockSVG } from './DigitalClock';
 
 // the clock's state has one field: The current time, based upon the
 // JavaScript class Date
