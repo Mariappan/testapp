@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.scss';
 import { Clock } from './components/Clock';
 
@@ -8,8 +8,8 @@ class InnerApp extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <text>M A A R I</text>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <text>C L O C K</text>
         </header>
 
         <div className="App-main">
